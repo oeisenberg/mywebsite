@@ -7,8 +7,8 @@ function App() {
       <header className="App-header">
         <Menu></Menu>
       </header>
-      <body>
-        
+      <body className="App-body">
+        Body of the site
       </body>
     </div>
   );
