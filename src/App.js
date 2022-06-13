@@ -1,5 +1,6 @@
 import './App.css';
 import Menu from './components/Menu';
+import PersonalLinks from './components/PersonalLinks';
 
 function App() {
   return (
@@ -8,7 +9,9 @@ function App() {
         <Menu></Menu>
       </header>
       <body className="App-body">
-        Body of the site
+        Completed sixth form in Singapore after having lived in Tokyo before continuing my studies in Computer Science at the University of Bath for which I achieved a Bachelor Of Science award with First-class honours.
+
+        <PersonalLinks></PersonalLinks>
       </body>
     </div>
   );
