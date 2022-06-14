@@ -13,6 +13,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
+import styled from 'styled-components';
 import AvatarIcon from "./../imgs/me.jpg";
 
 const pages = ["About Me", "My CV", "My Dissertation", "My Blog"];
@@ -28,11 +29,19 @@ const ResponsiveAppBar = () => {
     setAnchorElNav(null);
   };
 
+  // https://mui.com/material-ui/customization/transitions/#TransitionHover.js
+  const StyledAvatar = styled(Avatar)
+  `
+      &:hover {
+        transform: scale(1.4);
+      }
+      }
+  `;
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -43,12 +52,12 @@ const ResponsiveAppBar = () => {
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".05rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            Oliver Eisenberg
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -87,7 +96,6 @@ const ResponsiveAppBar = () => {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: "flex", md: "none" }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -99,12 +107,12 @@ const ResponsiveAppBar = () => {
               flexGrow: 1,
               fontFamily: "monospace",
               fontWeight: 700,
-              letterSpacing: ".3rem",
+              letterSpacing: ".03rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            LOGO
+            Oliver Eisenberg
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -118,7 +126,7 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
 
-          <Avatar alt="Oliver Eisenberg" src={AvatarIcon} />
+          <StyledAvatar alt="Oliver Eisenberg" src={AvatarIcon} />
         </Toolbar>
       </Container>
     </AppBar>
