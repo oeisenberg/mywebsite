@@ -15,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import styled from 'styled-components';
 import AvatarIcon from "./../imgs/me.jpg";
 
-const pages = ["My CV", "My Dissertation", "My Blog"];
+const pages = ["CV", "Dissertation"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -119,6 +119,7 @@ const ResponsiveAppBar = () => {
                 key={page}
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: "white", display: "block" }}
+                href={page.replace(/ /g,'')}
               >
                 {page}
               </Button>

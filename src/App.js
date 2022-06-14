@@ -1,21 +1,30 @@
 import './App.css';
-import Menu from './components/Menu';
-import PersonalLinks from './components/PersonalLinks';
+import React from "react";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
+import HomePage from './pages/HomePage' ;
+import MyDissertation from './pages/MyDissertation';
+import CV from './pages/MyCV';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Menu />
-      </header>
-      <body className="App-body">
-        Completed sixth form in Singapore after having lived in Tokyo before continuing my studies in Computer Science at the University of Bath for which I achieved a Bachelor Of Science award with First-class honours.
-      </body>
-      <footer className="App-footer">
-        <PersonalLinks />
-      </footer>
-    </div>
-  );
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />}>
+        <Route index element={<HomePage />} />
+      </Route>
+      <Route path="/CV" element={<CV />}>
+        <Route index element={<CV />} />
+      </Route>
+      <Route path="/Dissertation" element={<MyDissertation />}>
+        <Route index element={<MyDissertation />} />
+      </Route>
+    </Routes>
+  </BrowserRouter>
+  )
 }
 
 export default App;
