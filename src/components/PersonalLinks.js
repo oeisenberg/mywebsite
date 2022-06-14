@@ -6,7 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const PersonalLinks = () => {
     return (
-        <Box sx={{mt: 10}} display="flex" justifyContent="flex-end" alignItems="flex-end">
+        <Box sx={{mt: 10}} display="flex" alignItems="center" justifyContent="center">
             <Button sx={{m: 2}} variant="contained" target="_blank" href="https://www.github.com/oeisenberg" endIcon={<GitHubIcon />}>
                 GitHub
             </Button>
