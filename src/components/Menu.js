@@ -15,7 +15,7 @@ import MenuItem from "@mui/material/MenuItem";
 import styled from 'styled-components';
 import AvatarIcon from "./../imgs/me.jpg";
 
-const pages = ["About Me", "My CV", "My Dissertation", "My Blog"];
+const pages = ["My CV", "My Dissertation", "My Blog"];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
