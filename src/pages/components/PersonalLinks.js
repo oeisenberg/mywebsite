@@ -7,12 +7,12 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 const PersonalLinks = () => {
     return (
         <Box sx={{mt: 10}}>
-            <Button sx={{m: 2}} variant="contained" target="_blank" href="https://www.github.com/oeisenberg" endIcon={<GitHubIcon />}>
+            <Button sx={{m: 2}} variant="outlined" target="_blank" href="https://www.github.com/oeisenberg" endIcon={<GitHubIcon />}>
                 GitHub
             </Button>
 
             
-            <Button sx={{m: 2}} variant="contained" target="_blank" href="https://www.linkedin.com/in/olivereisenberg" endIcon={<LinkedInIcon />}>
+            <Button sx={{m: 2}} variant="outlined" target="_blank" href="https://www.linkedin.com/in/olivereisenberg" endIcon={<LinkedInIcon />}>
                 LinkedIn
             </Button>
             

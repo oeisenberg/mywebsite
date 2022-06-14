@@ -1,4 +1,4 @@
-// import "./App.css";
+import "./App.css";
 import Menu from "./components/Menu";
 import PersonalLinks from "./components/PersonalLinks";
 
